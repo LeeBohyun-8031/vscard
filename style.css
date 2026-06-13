@@ -1,4 +1,5 @@
 :root {
+<<<<<<< HEAD
   --bg: #000000;
   --card-bg: #1f2326;
   --text-main: #f4f7dc;
@@ -8,6 +9,17 @@
   --primary-light: rgba(171, 242, 0, 0.08);
   --primary-border: #ABF200;
   --shadow: 0 30px 80px rgba(0, 0, 0, 0.72);
+=======
+  --bg: #f6f8fb;
+  --card-bg: #ffffff;
+  --text-main: #111827;
+  --text-sub: #6b7280;
+  --line: #e5e7eb;
+  --primary: #2563eb;
+  --primary-light: #eff6ff;
+  --primary-border: #bfdbfe;
+  --shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
 }
 
 * {
@@ -28,7 +40,11 @@ body {
   justify-content: center;
   padding: 24px;
   background:
+<<<<<<< HEAD
     radial-gradient(circle at top, rgba(171, 242, 0, 0.08) 0, transparent 38%),
+=======
+    radial-gradient(circle at top, #ffffff 0, transparent 36%),
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
     var(--bg);
   font-family:
     -apple-system,
@@ -50,10 +66,15 @@ a {
   padding: 32px;
   border-radius: 28px;
   background: var(--card-bg);
+<<<<<<< HEAD
   border: 2px solid #ABF200;
   box-shadow:
     0 0 0 1px rgba(171, 242, 0, 0.08),
     0 30px 80px rgba(0, 0, 0, 0.72);
+=======
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  box-shadow: var(--shadow);
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
 }
 
 .profile {
@@ -70,8 +91,13 @@ a {
   height: 116px;
   padding: 5px;
   border-radius: 50%;
+<<<<<<< HEAD
   background: linear-gradient(135deg, #ABF200, #2f3f12);
   border: 1px solid #ABF200;
+=======
+  background: linear-gradient(135deg, #dbeafe, #ffffff);
+  border: 1px solid #dbeafe;
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
   margin-bottom: 18px;
   flex-shrink: 0;
 }
@@ -82,12 +108,20 @@ a {
   display: block;
   border-radius: 50%;
   object-fit: cover;
+<<<<<<< HEAD
   background: #22272a;
+=======
+  background: #f3f4f6;
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
 }
 
 .name {
   margin: 0;
+<<<<<<< HEAD
   font-size: 29px;
+=======
+  font-size: 28px;
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
   font-weight: 800;
   line-height: 1.25;
   letter-spacing: -0.04em;
@@ -100,7 +134,11 @@ a {
   justify-content: center;
   padding: 7px 13px;
   border-radius: 999px;
+<<<<<<< HEAD
   background: rgba(171, 242, 0, 0.1);
+=======
+  background: var(--primary-light);
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
   color: var(--primary);
   font-size: 14px;
   font-weight: 700;
@@ -130,22 +168,36 @@ a {
   min-height: 74px;
   padding: 15px 16px;
   border-radius: 18px;
+<<<<<<< HEAD
   background: #242a2d;
   border: 1px solid rgba(171, 242, 0, 0.22);
+=======
+  background: #ffffff;
+  border: 1px solid var(--line);
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
   text-decoration: none;
   color: inherit;
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
+<<<<<<< HEAD
     box-shadow 0.2s ease,
     background 0.2s ease;
+=======
+    box-shadow 0.2s ease;
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
 }
 
 .info-item:hover {
   transform: translateY(-2px);
+<<<<<<< HEAD
   background: #2a3134;
   border-color: #ABF200;
   box-shadow: 0 12px 28px rgba(171, 242, 0, 0.14);
+=======
+  border-color: var(--primary-border);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.08);
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
 }
 
 .icon {
@@ -156,6 +208,7 @@ a {
   justify-content: center;
   flex: 0 0 42px;
   border-radius: 14px;
+<<<<<<< HEAD
   background: rgba(171, 242, 0, 0.1);
   color: #ABF200;
   transition:
@@ -168,6 +221,10 @@ a {
   background: #ABF200;
   color: #000000;
   box-shadow: 0 0 18px rgba(171, 242, 0, 0.28);
+=======
+  background: var(--primary-light);
+  color: var(--primary);
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
 }
 
 .icon svg {
@@ -211,9 +268,15 @@ a {
   min-height: 48px;
   padding: 13px 16px;
   border-radius: 16px;
+<<<<<<< HEAD
   border: 1px solid #ABF200;
   background: rgba(171, 242, 0, 0.08);
   color: #ABF200;
+=======
+  border: 1px solid var(--primary-border);
+  background: var(--primary-light);
+  color: var(--primary);
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
   font-size: 14px;
   font-weight: 800;
   text-decoration: none;
@@ -229,26 +292,46 @@ a {
 
 .button:hover {
   transform: translateY(-2px);
+<<<<<<< HEAD
   background: #ABF200;
   color: #000000;
   border-color: #ABF200;
   box-shadow: 0 12px 26px rgba(171, 242, 0, 0.22);
+=======
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.22);
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
 }
 
 .button-primary,
 .button-secondary {
+<<<<<<< HEAD
   background: rgba(171, 242, 0, 0.08);
   color: #ABF200;
   border: 1px solid #ABF200;
+=======
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid var(--primary-border);
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
   box-shadow: none;
 }
 
 .button-primary:hover,
 .button-secondary:hover {
+<<<<<<< HEAD
   background: #ABF200;
   color: #000000;
   border-color: #ABF200;
   box-shadow: 0 12px 26px rgba(171, 242, 0, 0.22);
+=======
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.22);
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
 }
 
 @media (max-width: 480px) {
@@ -259,7 +342,10 @@ a {
   .business-card {
     padding: 26px 22px;
     border-radius: 24px;
+<<<<<<< HEAD
     border-width: 2px;
+=======
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
   }
 
   .profile-image-wrap {
@@ -268,7 +354,11 @@ a {
   }
 
   .name {
+<<<<<<< HEAD
     font-size: 26px;
+=======
+    font-size: 25px;
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
   }
 
   .intro {

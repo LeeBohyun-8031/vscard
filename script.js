@@ -14,6 +14,7 @@ if (profileImage) {
   profileImage.addEventListener("error", () => {
     profileImage.src = fallbackImage;
   });
+<<<<<<< HEAD
 }
 
 const businessCard = document.querySelector(".business-card");
@@ -138,3 +139,6 @@ emailItems.forEach((emailItem) => {
     }
   });
 });
+=======
+}
+>>>>>>> df0fb9496958b3d58b8cbae72dedfec61230e112
