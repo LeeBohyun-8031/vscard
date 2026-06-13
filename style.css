@@ -248,7 +248,8 @@ a {
 }
 
 .button-primary,
-.button-secondary {
+.button-secondary,
+.button-github {
   background: rgba(171, 242, 0, 0.08);
   color: #ABF200;
   border: 1px solid #ABF200;
