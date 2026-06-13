@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이보현 웹명함 카드</title>
+
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <main class="business-card" aria-label="이보현 웹명함 카드">
+    <section class="profile">
+      <div class="profile-image-wrap">
+        <img
+          id="profileImage"
+          class="profile-image"
+          src="./bear1.jpg"
+          alt="이보현 프로필 이미지"
+        />
+      </div>
+
+      <h1 class="name">이보현</h1>
+      <p class="job">게임기획자</p>
+      <p class="intro">
+        콘텐츠의 규칙과 경험의 흐름을 연결해, 플레이가 자연스럽게 이어지는 구조를 설계하는 게임기획자를 지향합니다.
+      </p>
+    </section>
+
+    <section class="info-list" aria-label="연락처 정보">
+      <a class="info-item" href="mailto:dkwgsk@gmail.com">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M4 6.5h16v11H4v-11Z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+            <path
+              d="m4.5 7 7.5 6 7.5-6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+
+        <span class="info-text">
+          <span class="label">Email</span>
+          <span class="value">dkwgsk@gmail.com</span>
+        </span>
+      </a>
+
+      <a class="info-item" href="tel:01055710831">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M8.4 5.2 10 8.8c.3.7.1 1.5-.5 2l-1.1.9c1.1 2.2 2.8 3.9 5 5l.9-1.1c.5-.6 1.3-.8 2-.5l3.6 1.6c.7.3 1.1 1 .9 1.8l-.5 2.1c-.2.8-.9 1.4-1.7 1.4C9.5 22 2 14.5 2 5.4c0-.8.6-1.5 1.4-1.7l2.1-.5c.8-.2 1.5.2 1.8 1Z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+
+        <span class="info-text">
+          <span class="label">Phone</span>
+          <span class="value">010-5571-0831</span>
+        </span>
+      </a>
+    </section>
+
+    <section class="actions" aria-label="빠른 연결 버튼">
+      <a class="button button-primary" href="mailto:dkwgsk@gmail.com">
+        이메일 보내기
+      </a>
+
+      <a class="button button-secondary" href="tel:01055710831">
+        전화 걸기
+      </a>
+
+      <a
+        class="button button-secondary"
+        href="https://drive.google.com/drive/folders/12plJdY0Ji16SZu5nslOCU7A6im8AcUFH?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        기획 포트폴리오 보기
+      </a>
+    </section>
+  </main>
+</body>
+</html>
