@@ -1,13 +1,13 @@
 :root {
-  --bg: #000000;
-  --card-bg: #1f2326;
+  --bg: #C4B73B;
+  --card-bg: #151812;
   --text-main: #f4f7dc;
   --text-sub: #b8c08f;
-  --line: rgba(171, 242, 0, 0.22);
-  --primary: #ABF200;
-  --primary-light: rgba(171, 242, 0, 0.08);
-  --primary-border: #ABF200;
-  --shadow: 0 30px 80px rgba(0, 0, 0, 0.72);
+  --line: #334018;
+  --primary: #8fb300;
+  --primary-light: #20280f;
+  --primary-border: #476600;
+  --shadow: 0 28px 70px rgba(0, 0, 0, 0.42);
 }
 
 * {
@@ -28,7 +28,7 @@ body {
   justify-content: center;
   padding: 24px;
   background:
-    radial-gradient(circle at top, rgba(171, 242, 0, 0.08) 0, transparent 38%),
+    radial-gradient(circle at top, rgba(71, 102, 0, 0.45) 0, transparent 38%),
     var(--bg);
   font-family:
     -apple-system,
@@ -50,15 +50,8 @@ a {
   padding: 32px;
   border-radius: 28px;
   background: var(--card-bg);
-  border: 2px solid #ABF200;
-  box-shadow:
-    0 0 0 1px rgba(171, 242, 0, 0.08),
-    var(--shadow);
-  transform: none;
-}
-
-.business-card:hover {
-  transform: none;
+  border: 1px solid #476600;
+  box-shadow: var(--shadow);
 }
 
 .profile {
@@ -75,8 +68,8 @@ a {
   height: 116px;
   padding: 5px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ABF200, #2f3f12);
-  border: 1px solid #ABF200;
+  background: linear-gradient(135deg, #476600, #1e260f);
+  border: 1px solid #476600;
   margin-bottom: 18px;
   flex-shrink: 0;
 }
@@ -87,7 +80,7 @@ a {
   display: block;
   border-radius: 50%;
   object-fit: cover;
-  background: #22272a;
+  background: #222916;
 }
 
 .name {
@@ -105,7 +98,7 @@ a {
   justify-content: center;
   padding: 7px 13px;
   border-radius: 999px;
-  background: rgba(171, 242, 0, 0.1);
+  background: var(--primary-light);
   color: var(--primary);
   font-size: 14px;
   font-weight: 700;
@@ -135,20 +128,20 @@ a {
   min-height: 74px;
   padding: 15px 16px;
   border-radius: 18px;
-  background: #242a2d;
-  border: 1px solid rgba(171, 242, 0, 0.22);
+  background: #1b2111;
+  border: 1px solid var(--line);
   text-decoration: none;
   color: inherit;
-  transform: none;
-  box-shadow: none;
-  transition: none;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .info-item:hover {
-  transform: none;
-  background: #242a2d;
-  border-color: rgba(171, 242, 0, 0.22);
-  box-shadow: none;
+  transform: translateY(-2px);
+  border-color: var(--primary-border);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
 }
 
 .icon {
@@ -159,15 +152,8 @@ a {
   justify-content: center;
   flex: 0 0 42px;
   border-radius: 14px;
-  background: rgba(171, 242, 0, 0.1);
-  color: #ABF200;
-  transition: none;
-}
-
-.info-item:hover .icon {
-  background: rgba(171, 242, 0, 0.1);
-  color: #ABF200;
-  box-shadow: none;
+  background: var(--primary-light);
+  color: var(--primary);
 }
 
 .icon svg {
@@ -203,11 +189,7 @@ a {
   margin-top: 28px;
 }
 
-/* 하단 버튼 3개 전용 기본 스타일 */
-.actions a,
-.actions .button,
-.actions .button-primary,
-.actions .button-secondary {
+.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -215,15 +197,14 @@ a {
   min-height: 48px;
   padding: 13px 16px;
   border-radius: 16px;
-  border: 1px solid #ABF200;
-  background: rgba(171, 242, 0, 0.08);
-  color: #ABF200;
+  border: 1px solid var(--primary-border);
+  background: var(--primary-light);
+  color: var(--primary);
   font-size: 14px;
   font-weight: 800;
   text-decoration: none;
   text-align: center;
   box-shadow: none;
-  transform: translateY(0);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
@@ -232,16 +213,28 @@ a {
     border-color 0.2s ease;
 }
 
-/* 하단 버튼 3개에만 떠오름 효과 적용 */
-.actions a:hover,
-.actions .button:hover,
-.actions .button-primary:hover,
-.actions .button-secondary:hover {
-  transform: translateY(-4px);
-  background: #ABF200;
-  color: #000000;
-  border-color: #ABF200;
-  box-shadow: 0 14px 28px rgba(171, 242, 0, 0.24);
+.button:hover {
+  transform: translateY(-2px);
+  background: var(--primary);
+  color: #101408;
+  border-color: var(--primary);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.32);
+}
+
+.button-primary,
+.button-secondary {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid var(--primary-border);
+  box-shadow: none;
+}
+
+.button-primary:hover,
+.button-secondary:hover {
+  background: var(--primary);
+  color: #101408;
+  border-color: var(--primary);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.32);
 }
 
 @media (max-width: 480px) {
@@ -252,7 +245,6 @@ a {
   .business-card {
     padding: 26px 22px;
     border-radius: 24px;
-    border-width: 2px;
   }
 
   .profile-image-wrap {

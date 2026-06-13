@@ -62,7 +62,9 @@ const getEmailText = (element) => {
   const valueElement = element.querySelector(".value");
   const text = valueElement ? valueElement.textContent : element.textContent;
 
-  const emailMatch = text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+  const emailMatch = text.match(
+    /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/
+  );
 
   return emailMatch ? emailMatch[0] : "";
 };
@@ -91,7 +93,7 @@ const showCopyMessage = (target, message) => {
   }, 1200);
 };
 
-const emailItems = Array.from(document.querySelectorAll(".info-item")).filter(
+const emailInfoItem = Array.from(document.querySelectorAll(".info-item")).find(
   (item) => {
     const href = item.getAttribute("href") || "";
     const text = item.textContent || "";
@@ -100,9 +102,9 @@ const emailItems = Array.from(document.querySelectorAll(".info-item")).filter(
   }
 );
 
-emailItems.forEach((emailItem) => {
-  emailItem.addEventListener("click", async (event) => {
-    const email = getEmailText(emailItem);
+if (emailInfoItem) {
+  emailInfoItem.addEventListener("click", async (event) => {
+    const email = getEmailText(emailInfoItem);
 
     if (!email) return;
 
@@ -111,9 +113,9 @@ emailItems.forEach((emailItem) => {
     const isCopied = await copyToClipboard(email);
 
     if (isCopied) {
-      showCopyMessage(emailItem, "이메일이 복사되었습니다");
+      showCopyMessage(emailInfoItem, "이메일이 복사되었습니다");
     } else {
-      showCopyMessage(emailItem, "복사에 실패했습니다");
+      showCopyMessage(emailInfoItem, "복사에 실패했습니다");
     }
   });
-});
+}
