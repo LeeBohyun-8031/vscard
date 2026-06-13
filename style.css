@@ -1,9 +1,9 @@
 :root {
-  --bg: #000000;
-  --card-bg: #1f2326;
+  --bg: #00000000;
+  --card-bg: #5D5D5D;
   --text-main: #f4f7dc;
-  --text-sub: #b8c08f;
-  --line: rgba(171, 242, 0, 0.22);
+  --text-sub: #d7e7a5;
+  --line: rgba(171, 242, 0, 0.28);
   --primary: #ABF200;
   --primary-light: rgba(171, 242, 0, 0.08);
   --primary-border: #ABF200;
@@ -27,7 +27,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background: #000000;
+  background: var(--bg);
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -53,6 +53,7 @@ a {
     0 0 0 1px rgba(171, 242, 0, 0.08),
     var(--shadow);
   transform: none;
+  transition: none;
 }
 
 .business-card:hover {
@@ -103,7 +104,7 @@ a {
   justify-content: center;
   padding: 7px 13px;
   border-radius: 999px;
-  background: rgba(171, 242, 0, 0.1);
+  background: rgba(171, 242, 0, 0.16);
   color: var(--primary);
   font-size: 14px;
   font-weight: 700;
@@ -126,27 +127,29 @@ a {
   margin-top: 28px;
 }
 
-.info-item {
+.info-list .info-item {
   display: flex;
   align-items: center;
   gap: 14px;
   min-height: 74px;
   padding: 15px 16px;
   border-radius: 18px;
-  background: #242a2d;
-  border: 1px solid rgba(171, 242, 0, 0.22);
+  background: rgba(31, 35, 38, 0.58);
+  border: 1px solid rgba(171, 242, 0, 0.28);
   text-decoration: none;
   color: inherit;
-  transform: none;
-  box-shadow: none;
-  transition: none;
+  transform: none !important;
+  box-shadow: none !important;
+  transition: none !important;
 }
 
-.info-item:hover {
-  transform: none;
-  background: #242a2d;
-  border-color: rgba(171, 242, 0, 0.22);
-  box-shadow: none;
+.info-list .info-item:hover,
+.info-list .info-item:focus,
+.info-list .info-item:active {
+  transform: none !important;
+  background: rgba(31, 35, 38, 0.58);
+  border-color: rgba(171, 242, 0, 0.28);
+  box-shadow: none !important;
 }
 
 .icon {
@@ -159,13 +162,15 @@ a {
   border-radius: 14px;
   background: rgba(171, 242, 0, 0.1);
   color: #ABF200;
-  transition: none;
+  transition: none !important;
 }
 
-.info-item:hover .icon {
+.info-list .info-item:hover .icon,
+.info-list .info-item:focus .icon,
+.info-list .info-item:active .icon {
   background: rgba(171, 242, 0, 0.1);
   color: #ABF200;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .icon svg {
@@ -228,7 +233,8 @@ a {
     border-color 0.2s ease;
 }
 
-.actions .button:hover {
+.actions .button:hover,
+.actions .button:focus {
   transform: translateY(-4px);
   background: #ABF200;
   color: #000000;
