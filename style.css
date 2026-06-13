@@ -202,6 +202,87 @@ a {
   word-break: break-all;
 }
 
+.portfolio-preview {
+  margin-top: 28px;
+  padding: 20px;
+  border-radius: 22px;
+  background: rgba(31, 35, 38, 0.44);
+  border: 1px solid rgba(171, 242, 0, 0.22);
+}
+
+.section-heading {
+  margin-bottom: 16px;
+}
+
+.section-kicker {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin: 0;
+  color: var(--text-main);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.04em;
+}
+
+.portfolio-list {
+  display: grid;
+  gap: 12px;
+}
+
+.portfolio-item {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(171, 242, 0, 0.06);
+  border: 1px solid rgba(171, 242, 0, 0.16);
+}
+
+.portfolio-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 12px;
+  background: rgba(171, 242, 0, 0.12);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.portfolio-content {
+  min-width: 0;
+}
+
+.portfolio-content h3 {
+  margin: 0 0 5px;
+  color: var(--text-main);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.portfolio-content p {
+  margin: 0;
+  color: rgba(244, 247, 220, 0.82);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: -0.03em;
+  word-break: keep-all;
+}
+
 .actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -280,6 +361,19 @@ a {
 
   .intro {
     font-size: 14px;
+  }
+
+  .portfolio-preview {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .portfolio-item {
+    padding: 13px;
+  }
+
+  .portfolio-content p {
+    font-size: 12px;
   }
 
   .actions {
