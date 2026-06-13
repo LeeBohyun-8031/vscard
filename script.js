@@ -69,7 +69,7 @@ const getEmailText = (element) => {
   return emailMatch ? emailMatch[0] : "";
 };
 
-const showCopyMessage = (target, message) => {
+const showTemporaryMessage = (target, message, labelText = "안내") => {
   const valueElement = target.querySelector(".value");
   const labelElement = target.querySelector(".label");
 
@@ -81,7 +81,7 @@ const showCopyMessage = (target, message) => {
   valueElement.textContent = message;
 
   if (labelElement) {
-    labelElement.textContent = "Copied";
+    labelElement.textContent = labelText;
   }
 
   window.setTimeout(() => {
@@ -90,7 +90,7 @@ const showCopyMessage = (target, message) => {
     if (labelElement) {
       labelElement.textContent = originalLabel;
     }
-  }, 1200);
+  }, 1400);
 };
 
 const emailInfoItem = Array.from(document.querySelectorAll(".info-item")).find(
@@ -113,9 +113,51 @@ if (emailInfoItem) {
     const isCopied = await copyToClipboard(email);
 
     if (isCopied) {
-      showCopyMessage(emailInfoItem, "이메일이 복사되었습니다");
+      showTemporaryMessage(emailInfoItem, "이메일이 복사되었습니다", "Copied");
     } else {
-      showCopyMessage(emailInfoItem, "복사에 실패했습니다");
+      showTemporaryMessage(emailInfoItem, "복사에 실패했습니다", "Error");
     }
+  });
+}
+
+const downloadContactFile = () => {
+  const contactData = [
+    "BEGIN:VCARD",
+    "VERSION:3.0",
+    "N:이;보현;;;",
+    "FN:이보현",
+    "TITLE:게임기획자",
+    "TEL;TYPE=CELL:010-5571-0831",
+    "EMAIL:dkwgsk@gmail.com",
+    "URL:https://github.com/LeeBohyun-8031",
+    "END:VCARD",
+  ].join("\n");
+
+  const blob = new Blob([contactData], {
+    type: "text/vcard;charset=utf-8",
+  });
+
+  const downloadUrl = URL.createObjectURL(blob);
+  const downloadLink = document.createElement("a");
+
+  downloadLink.href = downloadUrl;
+  downloadLink.download = "이보현.vcf";
+  downloadLink.style.display = "none";
+
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  document.body.removeChild(downloadLink);
+
+  URL.revokeObjectURL(downloadUrl);
+};
+
+const phoneInfoItem = document.querySelector("[data-save-contact]");
+
+if (phoneInfoItem) {
+  phoneInfoItem.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    downloadContactFile();
+    showTemporaryMessage(phoneInfoItem, "연락처 파일이 저장되었습니다", "Saved");
   });
 }
