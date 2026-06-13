@@ -54,6 +54,15 @@ a {
   box-shadow:
     0 0 0 1px rgba(171, 242, 0, 0.08),
     var(--shadow);
+  transform: none;
+  transition: none;
+}
+
+.business-card:hover {
+  transform: none;
+  box-shadow:
+    0 0 0 1px rgba(171, 242, 0, 0.08),
+    var(--shadow);
 }
 
 .profile {
@@ -134,6 +143,16 @@ a {
   border: 1px solid rgba(171, 242, 0, 0.22);
   text-decoration: none;
   color: inherit;
+  transform: none;
+  box-shadow: none;
+  transition: none;
+}
+
+.info-item:hover {
+  transform: none;
+  background: #242a2d;
+  border-color: rgba(171, 242, 0, 0.22);
+  box-shadow: none;
 }
 
 .icon {
@@ -146,6 +165,13 @@ a {
   border-radius: 14px;
   background: rgba(171, 242, 0, 0.1);
   color: #ABF200;
+  transition: none;
+}
+
+.info-item:hover .icon {
+  background: rgba(171, 242, 0, 0.1);
+  color: #ABF200;
+  box-shadow: none;
 }
 
 .icon svg {
@@ -205,7 +231,7 @@ a {
     border-color 0.2s ease;
 }
 
-.button:hover {
+.actions .button:hover {
   transform: translateY(-2px);
   background: #ABF200;
   color: #000000;
@@ -221,8 +247,8 @@ a {
   box-shadow: none;
 }
 
-.button-primary:hover,
-.button-secondary:hover {
+.actions .button-primary:hover,
+.actions .button-secondary:hover {
   background: #ABF200;
   color: #000000;
   border-color: #ABF200;

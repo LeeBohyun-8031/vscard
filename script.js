@@ -91,7 +91,7 @@ const showCopyMessage = (target, message) => {
   }, 1200);
 };
 
-const emailItems = Array.from(document.querySelectorAll("a, .info-item")).filter(
+const emailItems = Array.from(document.querySelectorAll(".info-item")).filter(
   (item) => {
     const href = item.getAttribute("href") || "";
     const text = item.textContent || "";
