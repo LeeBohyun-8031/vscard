@@ -124,59 +124,75 @@ a {
   word-break: keep-all;
 }
 
+/* 대표 포트폴리오: 연락처보다 더 크게 강조 */
 .portfolio-quick {
   width: 100%;
-  margin-top: 22px;
+  margin-top: 24px;
+  padding: 18px 16px;
+  border-radius: 22px;
+  background: rgba(31, 35, 38, 0.64);
+  border: 1px solid rgba(171, 242, 0, 0.42);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
 }
 
 .portfolio-quick-title {
-  margin: 0 0 12px;
+  margin: 0 0 15px;
   color: var(--primary);
-  font-size: 13px;
-  font-weight: 800;
+  font-size: 15px;
+  font-weight: 900;
   line-height: 1.3;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
 }
 
 .portfolio-icon-list {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .portfolio-icon-link {
+  min-width: 0;
+  min-height: 108px;
+  padding: 12px 7px 10px;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 7px;
-  min-width: 62px;
+  justify-content: center;
+  gap: 9px;
   color: inherit;
   text-decoration: none;
+  border-radius: 18px;
+  background: rgba(171, 242, 0, 0.06);
+  border: 1px solid rgba(171, 242, 0, 0.18);
   transform: translateY(0);
   transition:
     transform 0.2s ease,
-    opacity 0.2s ease;
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .portfolio-icon-link:hover,
 .portfolio-icon-link:focus {
   transform: translateY(-4px);
+  background: rgba(171, 242, 0, 0.1);
+  border-color: rgba(171, 242, 0, 0.52);
+  box-shadow: 0 14px 26px rgba(171, 242, 0, 0.16);
 }
 
 .portfolio-icon {
-  width: 54px;
-  height: 54px;
+  width: 62px;
+  height: 62px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(31, 35, 38, 0.72);
-  border: 1px solid rgba(171, 242, 0, 0.6);
+  background: rgba(31, 35, 38, 0.82);
+  border: 1px solid rgba(171, 242, 0, 0.72);
   color: #ABF200;
-  font-size: 23px;
+  font-size: 27px;
   font-weight: 900;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.24);
   transition:
     background 0.2s ease,
     color 0.2s ease,
@@ -189,33 +205,34 @@ a {
   background: #ABF200;
   color: #000000;
   border-color: #ABF200;
-  box-shadow: 0 12px 24px rgba(171, 242, 0, 0.25);
+  box-shadow: 0 12px 24px rgba(171, 242, 0, 0.28);
 }
 
 .portfolio-icon-label {
   color: var(--text-main);
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.04em;
-  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.05em;
+  word-break: keep-all;
 }
 
+/* 연락처: 대표 포트폴리오보다 작고 보조 정보처럼 정리 */
 .info-list {
   display: grid;
-  gap: 14px;
-  margin-top: 28px;
+  gap: 10px;
+  margin-top: 22px;
 }
 
 .info-list .info-item {
   display: flex;
   align-items: center;
-  gap: 14px;
-  min-height: 74px;
-  padding: 15px 16px;
-  border-radius: 18px;
-  background: rgba(31, 35, 38, 0.58);
-  border: 1px solid rgba(171, 242, 0, 0.28);
+  gap: 12px;
+  min-height: 58px;
+  padding: 10px 14px;
+  border-radius: 15px;
+  background: rgba(31, 35, 38, 0.5);
+  border: 1px solid rgba(171, 242, 0, 0.22);
   text-decoration: none;
   color: inherit;
   transform: none !important;
@@ -227,19 +244,19 @@ a {
 .info-list .info-item:focus,
 .info-list .info-item:active {
   transform: none !important;
-  background: rgba(31, 35, 38, 0.58);
-  border-color: rgba(171, 242, 0, 0.28);
+  background: rgba(31, 35, 38, 0.5);
+  border-color: rgba(171, 242, 0, 0.22);
   box-shadow: none !important;
 }
 
 .icon {
-  width: 42px;
-  height: 42px;
+  width: 34px;
+  height: 34px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 42px;
-  border-radius: 14px;
+  flex: 0 0 34px;
+  border-radius: 12px;
   background: rgba(171, 242, 0, 0.1);
   color: #ABF200;
   transition: none !important;
@@ -254,8 +271,8 @@ a {
 }
 
 .icon svg {
-  width: 21px;
-  height: 21px;
+  width: 17px;
+  height: 17px;
   display: block;
 }
 
@@ -265,16 +282,16 @@ a {
 
 .label {
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   color: var(--text-sub);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
 }
 
 .value {
   display: block;
   color: var(--text-main);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   word-break: break-all;
 }
@@ -359,18 +376,65 @@ a {
     font-size: 14px;
   }
 
+  .portfolio-quick {
+    margin-top: 22px;
+    padding: 16px 12px;
+    border-radius: 20px;
+  }
+
+  .portfolio-quick-title {
+    margin-bottom: 13px;
+    font-size: 14px;
+  }
+
   .portfolio-icon-list {
-    gap: 14px;
+    gap: 8px;
+  }
+
+  .portfolio-icon-link {
+    min-height: 98px;
+    padding: 10px 5px 9px;
+    border-radius: 16px;
   }
 
   .portfolio-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 21px;
+    width: 54px;
+    height: 54px;
+    font-size: 23px;
   }
 
   .portfolio-icon-label {
     font-size: 10px;
+  }
+
+  .info-list {
+    gap: 9px;
+    margin-top: 20px;
+  }
+
+  .info-list .info-item {
+    min-height: 54px;
+    padding: 9px 12px;
+    border-radius: 14px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+  }
+
+  .icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .label {
+    font-size: 10px;
+  }
+
+  .value {
+    font-size: 13px;
   }
 
   .actions {
